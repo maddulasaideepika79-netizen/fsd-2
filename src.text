@@ -1,0 +1,14 @@
+createFile.js 
+const fs = require('fs'); 
+const path = require('path'); 
+// Define the file name and content 
+const fileName = 'src.txt'; 
+const content = 'HTML, CSS, Javascript, Typescript, MongoDB, Express.js, React.js, Node.js'; 
+// Create the file and write the content 
+fs.writeFile(path.join(__dirname, fileName), content, (err) => { 
+ if (err) { 
+ console.error('Error writing file:', err); 
+ return; 
+ } 
+ console.log(`${fileName} created successfully with content.`); 
+}); 
